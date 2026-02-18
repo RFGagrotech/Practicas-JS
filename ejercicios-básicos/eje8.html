@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>bck_ejercicios-variables</title>
+</head>
+<body>
+    <h1>Ejercicios Javascript sobre variables</h1>
+    <h2>Ejercicio 8 - Básico</h2>
+    <p>Escribir un programa que lea un entero positivo, n, introducido por el usuario 
+        y después muestre en pantalla la suma de todos los enteros desde 1 hasta n. 
+        La suma de los n primeros enteros positivos puede ser calculada de la siguiente forma:
+    </p>
+    <a href="../index.html">Volver</a>
+    <script>
+        let n = Number(prompt('Escribe un número entero positivo'));
+        
+        if (!Number.isInteger(n) || n <= 0) {
+            alert("Debes introducir un número entero positivo");
+        } else {
+            let suma = 0;
+
+            for (let i = 1; i <= n; i++) {
+                suma += i;
+            }
+
+            alert('La suma desde 1 hasta ' + n + ' es: ' + suma);
+        }
+    </script>
+</body>
+</html>

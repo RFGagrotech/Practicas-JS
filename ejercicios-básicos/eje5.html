@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>bck_ejercicios-variables</title>
+</head>
+<body>
+    <h1>Ejercicios Javascript sobre variables</h1>
+    <h2>Ejercicio 5 - Básico</h2>
+    <p>Escribir un programa que pregunte el nombre del usuario en la consola 
+        y después de que el usuario lo introduzca muestre por pantalla \<NOMBRE> 
+        tiene \<n> letras, donde \<NOMBRE> es el nombre de usuario en mayúsculas 
+        y \<n> es el número de letras que tienen el nombre.
+    </p>
+    <a href="../index.html">Volver</a>
+    <script>
+        let nombre = prompt("Introduce tu nombre");
+        let contador = 0;
+
+        for (let i = 0; i < nombre.length; i++) {
+            if (nombre[i] !== " ") {
+                contador++;
+            }
+        }
+        console.log(`${nombre.toUpperCase()} tiene ${contador} letras`);
+    </script>
+</body>
+</html>

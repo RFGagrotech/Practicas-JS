@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>bck_ejercicios-variables</title>
+</head>
+<body>
+    <h1>Ejercicios Javascript sobre variables</h1>
+    <h2>Ejercicio 9 - Básico</h2>
+    <p>Escribir un programa que pida al usuario su peso (en kg) y estatura (en metros), 
+        calcule el índice de masa corporal y lo almacene en una variable, y muestre por 
+        pantalla la frase Tu índice de masa corporal es \<imc> donde \<imc> es el índice 
+        de masa corporal calculado redondeado con dos decimales.</p>
+    <a href="../index.html">Volver</a>
+    <script>
+        let peso = parseFloat(prompt('¿Cuál es tu peso (Kg)?'));
+        let height = parseFloat(prompt('¿Cuál es tu altura (m)?'));
+
+        if (isNaN(peso) || isNaN(height) || height <= 0) {
+
+            alert("Datos no válidos");
+
+        } else {
+            let imc = peso / (height * height);
+            let categoria = "";
+
+            if (imc < 18.5) {
+                categoria = "Delgado";
+            } else if (imc < 25){
+                categoria = "Normal";
+            } else if (imc < 30) {
+                categoria = "Sobrepeso";
+            } else if (imc < 35) {
+                categoria = "Obesidad Grado I";
+            } else if (imc < 40) {
+                categoria = " Obesidad Grado II";
+            } else {
+                categoria = "Obesidad Grado III"
+            }
+
+            alert(`Tu IMC es ${imc.toFixed(2)} (${categoria})`);
+            console.log(`Tu IMC es ${imc.toFixed(2)} (${categoria})`);
+        }
+
+    </script>
+</body>
+</html>

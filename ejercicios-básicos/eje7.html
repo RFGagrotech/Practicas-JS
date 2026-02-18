@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>bck_ejercicios-variables</title>
+</head>
+<body>
+    <h1>Ejercicios Javascript sobre variables</h1>
+    <h2>Ejercicio 7 - Básico</h2>
+    <p>Escribir un programa que pregunte al usuario por el número de horas trabajadas 
+        y el coste por hora. Después debe mostrar por pantalla la paga que le corresponde.</p>
+    <a href="../index.html">Volver</a>
+    <script>
+        let hours = Number(prompt("¿Cuantas horas trabajas?"));
+        let pay = Number(prompt("¿Cuanto es el precio por 1 hora?"));
+        let payment = hours * pay;
+
+        alert(`Por ${hours} horas, con precio por hora de ${pay}, te pagan ${payment}.`);
+        console.log(`Por ${hours} horas, con precio por hora de ${pay}, te pagan ${payment}.`);
+        console.info(`Por ${hours} horas, con precio por hora de ${pay}, te pagan ${payment}.`);
+    </script>
+</body>
+</html>

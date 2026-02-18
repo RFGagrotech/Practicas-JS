@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>bck_ejercicios-variables</title>
+</head>
+<body>
+    <h1>Ejercicios Javascript sobre variables</h1>
+    <h2>Ejercicio 14 - Básico</h2>
+    <p>Una panadería vende barras de pan a 3.49€ cada una. El pan que no es el día tiene un 
+        descuento del 60%. Escribir un programa que comience leyendo el número de barras 
+        vendidas que no son del día. Después el programa debe mostrar el precio habitual de 
+        una barra de pan, el descuento que se le hace por no ser fresca y el coste final total.</p>
+    <a href="../index.html">Volver</a>
+    <script>
+        const pan = 3.49;
+        const desc = 0.60;
+
+        let compra = Number(prompt("¿Cuántas barras de pan quieres?"));
+
+        if (isNaN(compra) || compra < 0) {
+            alert("Introduce un numero entero positivo");
+        } else {
+
+            let descuentoUnitario = pan * desc;
+            let precioFinalUnitario = pan - descuentoUnitario;
+            let total = precioFinalUnitario * compra;
+
+            console.log(`Precio habitual: ${pan.toFixed(2)} €`);
+            console.log(`Descuento por barra: ${descuentoUnitario.toFixed(2)} €`);
+            console.log(`Precio final por barra: ${precioFinalUnitario.toFixed(2)} €`);
+            console.log(`Coste total: ${total.toFixed(2)} €`);
+
+            alert(`Precio habitual: ${pan.toFixed(2)} €`);
+            alert(`Descuento por barra: ${descuentoUnitario.toFixed(2)} €`);
+            alert(`Precio final por barra: ${precioFinalUnitario.toFixed(2)} €`);
+            alert(`Coste total: ${total.toFixed(2)} €`);
+        }
+
+    </script>
+</body>
+</html>

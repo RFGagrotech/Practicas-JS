@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>bck_ejercicios-variables</title>
+</head>
+<body>
+    <h1>Ejercicios Javascript sobre variables</h1>
+    <h2>Ejercicio 12 - Básico</h2>
+    <p>Una juguetería tiene mucho éxito en dos de sus productos: payasos y muñecas. 
+        Suele hacer venta por correo y la empresa de logística les cobra por peso de 
+        cada paquete así que deben calcular el peso de los payasos y muñecas que saldrán 
+        en cada paquete a demanda. Cada payaso pesa 112 g y cada muñeca 75 g. Escribir un
+        programa que lea el número de payasos y muñecas vendidos en el último pedido y 
+        calcule el peso total del paquete que será enviado.</p>
+    <a href="../index.html">Volver</a>
+    <script>
+        const PESO_PAYASO = 112;   // gramos
+        const PESO_MUNECA = 75;    // gramos
+
+        let payasos = Number(prompt("¿Cuántos payasos se han vendido?"));
+        let munecas = Number(prompt("¿Cuántas muñecas se han vendido?"));
+
+        if (isNaN(payasos) || isNaN(munecas) || payasos < 0 || munecas < 0) {
+            alert("Introduce cantidades válidas");
+        } else {
+
+            let pesoTotal = (payasos * PESO_PAYASO) + (munecas * PESO_MUNECA);
+
+            alert(`El peso total del paquete es ${pesoTotal} gramos`);
+            console.log(`Peso total: ${pesoTotal} g`);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>bck_ejercicios-variables</title>
+</head>
+<body>
+    <h1>Ejercicios Javascript sobre variables</h1>
+    <h2>Ejercicio 11 - Básico</h2>
+    <p>Escribir un programa que pregunte al usuario una cantidad a invertir, el interés anual y 
+        el número de años, y muestre por pantalla el capital obtenido en la inversión.</p>
+    <a href="../index.html">Volver</a>
+    <script>
+        let invest = Number(prompt("¿Cantidad a invertir?"));
+        let interest = parseFloat(prompt("¿Cuál es el interes?"));
+        let months = Number(prompt("¿Cuantos meses?"));
+
+        if (isNaN(invest) || isNaN(interest) || isNaN(months) || invest <= 0 || months <= 0) {
+            alert("Introduce valores numéricos válidos");
+        } else {
+            let annualRate = interest / 100;
+
+            let monthlyRate = annualRate / 12;
+
+            let finalCapital = invest * Math.pow((1 + monthlyRate), months);
+
+            alert(`El capital obtenido tras ${months} meses es ${finalCapital.toFixed(2)} €`);
+            console.log(`Capital final: ${finalCapital.toFixed(2)} €`);
+        }
+
+    </script>
+</body>
+</html>

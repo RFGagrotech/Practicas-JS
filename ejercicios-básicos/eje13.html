@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>bck_ejercicios-variables</title>
+</head>
+<body>
+    <h1>Ejercicios Javascript sobre variables</h1>
+    <h2>Ejercicio 13 - Básico</h2>
+    <p>Imagina que acabas de abrir una nueva cuenta de ahorros que te ofrece el 4% de interés 
+        al año. Estos ahorros debido a intereses, que no se cobran hasta finales de año, se 
+        te añaden al balance final de tu cuenta de ahorros. Escribir un programa que comience 
+        leyendo la cantidad de dinero depositada en la cuenta de ahorros, introducida por el 
+        usuario. Después el programa debe calcular y mostrar por pantalla la cantidad de ahorros 
+        tras el primer, segundo y tercer años. Redondear cada cantidad a dos decimales.</p>
+    <a href="../index.html">Volver</a>
+    <script>
+        const interest = 0.04;
+        let deposit = Number(prompt("Cantidad a depositar"));
+
+        if (isNaN(deposit) || deposit <= 0) {
+            alert("Introduce una cantidad válida");
+        } else {
+            for (let year = 1; year <= 3; year++) {
+                deposit = deposit * (1 + interest);
+                console.log(`Año ${year}: ${deposit.toFixed(2)} €`);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>bck_ejercicios-variables</title>
+</head>
+<body>
+    <h1>Ejercicios Javascript sobre variables</h1>
+    <h2>Ejercicio 10 - Básico</h2>
+    <p>Escribir un programa que pida al usuario dos números enteros y muestre por pantalla: 
+        La división resultande de dividir \<n> entre \<m> da un cociente \<c> y un resto 
+        \<r> donde \<n> y \<m> son los números introducidos por el usuario, y \<c> y 
+        \<r> son el cociente y el resto de la división entera respectivamente.</p>
+    <a href="../index.html">Volver</a>
+    <script>
+        let n = Number(prompt("Indica un número entero al que dividir"));
+        let m = Number(prompt("Indica un número entero que sea el divisor"));
+
+        if ( isNaN(n) || isNaN(m) ) {
+            alert("Introduce sólo números enteros");
+            
+        } else {
+            let c = Math.floor (n / m);
+            let r = n % m;
+
+
+        alert(`La división resultante de dividir ${n} entre ${m} da un cociente ${c} y un resto ${r}`);
+        console.log(`La división resultante de dividir ${n} entre ${m} da un cociente ${c} y un resto ${r}`);
+        }
+
+
+    </script>
+</body>
+</html>
