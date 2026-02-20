@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Memora</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body class="memora">
+  <header class="top">
+    <h1>Memora</h1>
+    <div class="controls">
+      <div class="difficulty">
+        <button data-level="easy">Fácil</button>
+        <button data-level="medium">Amateur</button>
+        <button data-level="hard">Avanzado</button>
+      </div>
+      <button id="newGame">Nueva partida</button>
+      <span id="moves">Movimientos: 0</span>
+      <span id="pairs">Parejas: 0/0</span>
+    </div>
+  </header>
+
+  <main class="main-board">
+    <section id="board" class="board" aria-label="Tablero"></section>
+  </main>
+
+  <script src="../js/mainmemora.js"></script>
+</body>
+</html>
